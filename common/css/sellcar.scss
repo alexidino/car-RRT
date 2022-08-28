@@ -1,0 +1,177 @@
+.sellcar-main {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  .sellcar {
+    max-width: 1310px;
+    height: 1040px;
+    padding: 95px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-top {
+      font-family: 'Exo 2';
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 42px;
+      color: #333333;
+      margin-bottom: 100px;
+    }
+    &-content {
+      max-width: 1330px;
+      height: 100%;
+      &--title {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        .title-col--one {
+          width: 32%;
+          height: 100%;
+        }
+        .title-col--two {
+          width: 35%;
+          height: 100%;
+          background: #F7FCF7;
+          border: 2px solid #BAE0BB;
+          border-bottom: none;
+          border-radius: 10px 10px 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 10px;
+          margin-right: 10px;
+          .logo-PPT {
+          }
+        }
+        .title-col--three {
+          width: 34%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #EEEEEE;
+
+          font-family: 'Exo 2';
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+          color: #333333;
+        }
+      }
+      &--body {
+        height: 94px;
+        width: 100%;
+        display: flex;
+        color: #333333;
+        .body-col--one {
+          height: 100%;
+          width: 32%;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          position: relative;
+  
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 22px;
+        }
+        .body-col--one::before {
+          content: '';
+          height: 100%;
+          width: 10px;
+          background: #F7FCF7;
+          position: absolute;
+          top: 0;
+          right: -12px;
+        }
+
+        .body-col--two {
+          width: 35%;
+          height: 100%;
+          background: #F7FCF7;
+          border: 2px solid #BAE0BB;
+          border-top: 1px solid #EEEEEE;
+          border-bottom: 1px solid #EEEEEE;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          padding: 0 10px;
+          margin-right: 10px;
+
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 17px;
+          text-align: center;
+        }
+        
+        .body-col--three {
+          width: 34%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #EEEEEE;
+          position: relative;
+
+          text-align: center;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 17px;
+        }
+        .body-col--three::before {
+          content: '';
+          height: 102%;
+          width: 10px;
+          background: #F7FCF7;
+          position: absolute;
+          top: 0;
+          left: -22px;
+        }
+        .green-border {
+          padding: 10px 16px;
+          border: 1.5px solid #3A9C3E;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 18px;
+          color: #3A9C3E;
+        }
+        .gray-border {
+          padding: 10px 16px;
+          border: 1.5px solid #808080;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 18px;
+          color: #808080;
+        }
+      }
+      &--footer {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        .footer-col--one {
+          height: 100%;
+          width: 32%;
+        }
+        .footer-col--two {
+          width: 35%;
+          height: 100%;
+          background: #F7FCF7;
+          border: 2px solid #BAE0BB;
+          border-radius: 0 0 10px 10px;
+          border-top: none;
+          margin-right: 10px;
+
+        }
+        .footer-col--three {
+          width: 34%;
+          height: 100%;
+        }
+      }
+    } 
+  }
+}
