@@ -1,0 +1,116 @@
+.order-main {
+  width: 100%;
+  height: 1340px;
+  background: #F5F5F7; }
+
+.order {
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .order-top {
+    margin-bottom: 100px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 42px;
+    color: #333333; }
+  .order-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .order-content::before {
+      content: '';
+      top: 0;
+      left: calc(50% - 2px);
+      position: absolute;
+      width: 4px;
+      height: 100%;
+      background: black; }
+    .order-content--item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-bottom: 120px; }
+      .order-content--item-icon {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px; }
+      .order-content--item-content {
+        width: calc(50% - 100px);
+        padding-right: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: start; }
+        .order-content--item-content-title {
+          font-family: 'Exo 2';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 32px;
+          color: #333333;
+          margin-bottom: 10px; }
+        .order-content--item-content-icon {
+          font-family: 'Exo 2';
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 18px;
+          padding: 6px 10px;
+          border: 2px solid #3A9C3E;
+          border-radius: 8px;
+          color: #3A9C3E;
+          margin-bottom: 10px; }
+        .order-content--item-content-text {
+          font-family: 'Exo 2';
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 22px;
+          color: #333333; }
+      .order-content--item-number {
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 100px;
+        line-height: 100%;
+        color: #3A9C3E;
+        padding-left: 120px;
+        position: relative; }
+    .order-content--item:last-child {
+      padding-bottom: 70px; }
+    .order-content .reverse {
+      flex-direction: row-reverse;
+      position: relative !important; }
+      .order-content .reverse-icon {
+        margin-right: 0;
+        margin-left: 20px; }
+      .order-content .reverse-text {
+        padding-right: 0;
+        padding-left: 120px; }
+      .order-content .reverse-number {
+        padding-left: 0;
+        padding-right: 120px; }
+      .order-content .reverse-number::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #3A9C3E;
+        position: absolute;
+        top: 50%;
+        right: -10px !important;
+        left: none; }
+      .order-content .reverse-no--number::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #3A9C3E;
+        position: absolute;
+        top: 50%;
+        left: -10px; }
+
+/*# sourceMappingURL=order.css.map */
