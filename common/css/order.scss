@@ -2,6 +2,9 @@
   width: 100%;
   height: 1340px;
   background: #F5F5F7;
+  @media (max-width: 992px) {
+    height: 1110px;
+  }
 }
 
 .order {
@@ -12,6 +15,12 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  @media (max-width: 1200px) {
+    padding: 80px 0;
+  }
+  @media (max-width: 992px) {
+    padding: 50px 0;
+  }
   &-top {
     margin-bottom: 100px;
     font-family: 'Exo 2';
@@ -20,6 +29,9 @@
     font-size: 44px;
     line-height: 42px;
     color: #333333;
+    @media (max-width: 992px) {
+      margin-bottom: 60px;
+    }
   }
 
   &-content {
@@ -35,12 +47,23 @@
       width: 4px;
       height: calc(100% - 104px);
       background: black;
+      @media (max-width: 1200px) {
+        top: 60px;
+        height: calc(100% - 115px);
+      }
+      @media (max-width: 992px) {
+        top: 60px;
+        height: calc(100% - 130px);
+      }
     }
     &--item {
       width: 100%;
       display: flex;
       align-items: center;
       padding-bottom: 120px;
+      @media (max-width: 992px) {
+        padding-bottom: 60px;
+      }
       &-icon {
         width: 80px;
         height: 80px;
@@ -48,7 +71,7 @@
       }
       &-content {
         width: calc(50% - 100px);
-        padding-right: 120px;
+        padding-right: 60px;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -69,6 +92,10 @@
             font-size: 24px;
             line-height: 24px;
           }
+          @media (max-width: 992px) {
+            font-size: 22px;
+            line-height: 22px;
+          }
         }
         &-icon {
           font-family: 'Exo 2';
@@ -82,11 +109,14 @@
           margin-bottom: 10px;
         }
         &-text {
-          font-family: 'Exo 2';
           font-weight: 300;
           font-size: 18px;
           line-height: 22px;
           color: #333333;
+          @media (max-width: 992px) {
+            font-size: 16px;
+            line-height: 16px;
+          }
         }
       }
       &-number {
@@ -96,7 +126,7 @@
         font-size: 100px;
         line-height: 100%;
         color: #3A9C3E;
-        padding-left: 120px;
+        padding-left: 60px;
         position: relative;
       }
       // &-number::before {
@@ -122,11 +152,11 @@
       }
       &-text {
         padding-right: 0;
-        padding-left: 120px;
+        padding-left: 60px;
       }
       &-number {
         padding-left: 0;
-        padding-right: 120px;
+        padding-right: 60px;
       }
       &-number::before {
         content: '';
@@ -161,6 +191,9 @@
     background: #3A9C3E;
     border-radius: 8px;
     margin-top: 70px;
+    @media (max-width: 992px) {
+      margin-top: 50px;
+    }
     a {
       font-family: 'Exo 2';
       font-weight: 500;
