@@ -5,6 +5,12 @@
   @media (max-width: 1200px) {
     .advantage-main {
       height: 450px; } }
+  @media (max-width: 992px) {
+    .advantage-main {
+      height: 510px; } }
+  @media (max-width: 768px) {
+    .advantage-main {
+      height: 100%; } }
   .advantage-main .advantage {
     max-width: 1520px;
     height: 100%;
@@ -19,7 +25,7 @@
         padding: 80px 0; } }
     @media (max-width: 992px) {
       .advantage-main .advantage {
-        padding: 20px 0; } }
+        padding: 50px 0; } }
     .advantage-main .advantage-top {
       font-weight: 600;
       font-size: 44px;
@@ -33,6 +39,11 @@
       @media (max-width: 998px) {
         .advantage-main .advantage-top {
           margin-bottom: 30px; } }
+      @media (max-width: 768px) {
+        .advantage-main .advantage-top {
+          text-align: center;
+          font-size: 28px;
+          line-height: 28px; } }
 
 .advantage-content {
   display: flex;
@@ -56,6 +67,12 @@
         max-height: 170px;
         padding: 0 30px;
         margin: 10px 30px; } }
+    @media (max-width: 768px) {
+      .advantage-content--info {
+        width: 50%;
+        align-items: center;
+        padding: 10px 5%;
+        margin: 0; } }
     .advantage-content--info-title {
       font-weight: 600;
       font-size: 28px;
@@ -69,6 +86,10 @@
         .advantage-content--info-title {
           font-size: 21px;
           line-height: 28px; } }
+      @media (max-width: 768px) {
+        .advantage-content--info-title {
+          font-size: 18px;
+          line-height: 18px; } }
     .advantage-content--info-text {
       height: 44px;
       font-weight: 300;
@@ -83,5 +104,9 @@
         .advantage-content--info-text {
           font-size: 16px;
           line-height: 18px; } }
+      @media (max-width: 768px) {
+        .advantage-content--info-text {
+          font-size: 14px;
+          line-height: 14px; } }
 
 /*# sourceMappingURL=advantage.css.map */

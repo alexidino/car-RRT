@@ -1,41 +1,58 @@
-.header.fade {
+.header {
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
+  color: #333333;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent; }
-  .header.fade .container {
+  background: transparent;
+  transition: 600ms; }
+  @media (max-width: 992px) {
+    .header {
+      background: #333; } }
+  .header .container {
     padding: 0 5px; }
-    .header.fade .container .nav {
+    @media (max-width: 992px) {
+      .header .container {
+        min-width: 100%;
+        padding: 0 40px; } }
+    .header .container .nav {
       height: 100px;
       display: flex;
       width: 100%;
       justify-content: space-between;
       align-items: center; }
-      .header.fade .container .nav-logo {
+      .header .container .nav-logo {
         margin-right: 40px; }
-      .header.fade .container .nav-menu {
+        @media (max-width: 992px) {
+          .header .container .nav-logo {
+            margin: 0; } }
+      .header .container .nav-menu {
         flex-grow: 1; }
-        .header.fade .container .nav-menu .nav-links {
+        @media (max-width: 992px) {
+          .header .container .nav-menu {
+            display: none; } }
+        .header .container .nav-menu .nav-links {
           display: flex;
           margin: 0;
           list-style: none; }
-          .header.fade .container .nav-menu .nav-links li a {
+          .header .container .nav-menu .nav-links li a {
             text-decoration: none;
             margin: 25px;
             font-family: 'Exo 2';
             font-weight: 500;
             font-size: 16px;
             line-height: 19px;
-            color: #333333; }
+            color: inherit; }
             @media (max-width: 1400px) {
-              .header.fade .container .nav-menu .nav-links li a {
+              .header .container .nav-menu .nav-links li a {
                 margin: 12px; } }
-          .header.fade .container .nav-menu .nav-links li a:hover {
+          .header .container .nav-menu .nav-links li a:hover {
             color: #3A9C3E; }
-      .header.fade .container .nav-tel {
+      .header .container .nav .href-color {
+        color: #3A9C3E !important; }
+      .header .container .nav-tel {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -44,11 +61,64 @@
         border-radius: 8px;
         background: #3A9C3E;
         text-align: center; }
-        .header.fade .container .nav-tel a {
+        @media (max-width: 415px) {
+          .header .container .nav-tel {
+            display: none; } }
+        .header .container .nav-tel a {
+          width: 100%;
+          height: 100%;
           display: flex;
           align-items: center;
+          justify-content: center;
+          text-decoration: none;
           color: white; }
-          .header.fade .container .nav-tel a svg {
+          .header .container .nav-tel a svg {
             margin-right: 10px; }
+      .header .container .nav .menu-icon {
+        display: none; }
+        @media (max-width: 992px) {
+          .header .container .nav .menu-icon {
+            display: block;
+            cursor: pointer; } }
+
+.bg-fade {
+  background: #333;
+  color: white;
+  transition: 600ms; }
+
+@media (max-width: 992px) {
+  .active {
+    width: 60% !important;
+    height: 100%; } }
+  @media (max-width: 992px) and (max-width: 540px) {
+    .active {
+      width: 80% !important; } }
+@media (max-width: 992px) {
+    .active .container {
+      height: 100%;
+      width: 100%;
+      padding: 30px 20px; }
+      .active .container .nav {
+        flex-direction: column;
+        align-items: center;
+        height: 100%; }
+        .active .container .nav-logo {
+          margin: 0; }
+        .active .container .nav-menu {
+          display: flex;
+          padding-top: 100px; }
+          .active .container .nav-menu .nav-links {
+            flex-direction: column;
+            align-items: center; }
+            .active .container .nav-menu .nav-links li {
+              font-size: 28px;
+              color: #DADADA;
+              padding: 2px 5px; } }
+      @media (max-width: 992px) and (max-width: 415px) {
+        .active .container .nav-tel {
+          display: flex; } }
+      @media (max-width: 992px) and (max-width: 992px) {
+        .active .container .nav .menu-icon {
+          display: none; } }
 
 /*# sourceMappingURL=header.css.map */

@@ -4,12 +4,25 @@
   background: #F5F5F7; }
   @media (max-width: 992px) {
     .order-main {
-      height: 1110px; } }
+      height: 1070px; } }
+  @media (max-width: 768px) {
+    .order-main {
+      height: 100%; } }
+  @media (max-width: 992px) {
+    .order-main .container {
+      padding: 0; } }
+  @media (max-width: 768px) {
+    .order-main .container {
+      padding: 0 7%;
+      min-width: 100%; } }
+  @media (max-width: 540px) {
+    .order-main .container {
+      padding: 0 5%; } }
 
 .order {
   max-width: 1260px;
   height: 100%;
-  padding: 120px 0;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +33,9 @@
   @media (max-width: 992px) {
     .order {
       padding: 50px 0; } }
+  @media (max-width: 768px) {
+    .order {
+      padding: 50px 0; } }
   .order-top {
     margin-bottom: 100px;
     font-family: 'Exo 2';
@@ -28,48 +44,63 @@
     font-size: 44px;
     line-height: 42px;
     color: #333333; }
+    @media (max-width: 1200px) {
+      .order-top {
+        font-size: 38px;
+        line-height: 38px; } }
     @media (max-width: 992px) {
       .order-top {
         margin-bottom: 60px; } }
+    @media (max-width: 768px) {
+      .order-top {
+        text-align: center;
+        font-size: 28px;
+        line-height: 28px;
+        margin-bottom: 50px; } }
   .order-content {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     position: relative; }
-    .order-content::before {
-      content: '';
-      top: 47px;
-      left: calc(50% - 2px);
-      position: absolute;
-      width: 4px;
-      height: calc(100% - 104px);
-      background: black; }
-      @media (max-width: 1200px) {
-        .order-content::before {
-          top: 60px;
-          height: calc(100% - 115px); } }
-      @media (max-width: 992px) {
-        .order-content::before {
-          top: 60px;
-          height: calc(100% - 130px); } }
+    @media (max-width: 768px) {
+      .order-content {
+        align-items: flex-start; } }
     .order-content--item {
       width: 100%;
       display: flex;
       align-items: center;
-      padding-bottom: 120px; }
+      padding-bottom: 110px; }
       @media (max-width: 992px) {
         .order-content--item {
-          padding-bottom: 60px; } }
+          padding-bottom: 40px; } }
+      @media (max-width: 768px) {
+        .order-content--item {
+          flex-direction: row-reverse;
+          padding-bottom: 40px; } }
       .order-content--item-icon {
         width: 80px;
         height: 80px;
         margin-right: 20px; }
+        @media (max-width: 768px) {
+          .order-content--item-icon {
+            margin-right: 0; } }
+        @media (max-width: 540px) {
+          .order-content--item-icon {
+            display: none; } }
       .order-content--item-content {
         width: calc(50% - 100px);
         padding-right: 60px;
         display: flex;
         flex-direction: column;
         align-items: start; }
+        @media (max-width: 768px) {
+          .order-content--item-content {
+            padding-right: 20px;
+            flex-grow: 1; } }
+        @media (max-width: 540px) {
+          .order-content--item-content {
+            padding-right: 0; } }
         .order-content--item-content-title {
           font-family: 'Exo 2';
           font-style: normal;
@@ -90,6 +121,10 @@
             .order-content--item-content-title {
               font-size: 22px;
               line-height: 22px; } }
+          @media (max-width: 540px) {
+            .order-content--item-content-title {
+              font-size: 18px;
+              line-height: 18px; } }
         .order-content--item-content-icon {
           font-family: 'Exo 2';
           font-weight: 400;
@@ -100,6 +135,12 @@
           border-radius: 8px;
           color: #3A9C3E;
           margin-bottom: 10px; }
+          @media (max-width: 540px) {
+            .order-content--item-content-icon {
+              font-size: 14px;
+              line-height: 14px;
+              padding: 4px 8px;
+              margin-bottom: 8px; } }
         .order-content--item-content-text {
           font-weight: 300;
           font-size: 18px;
@@ -109,31 +150,62 @@
             .order-content--item-content-text {
               font-size: 16px;
               line-height: 16px; } }
+          @media (max-width: 540px) {
+            .order-content--item-content-text {
+              font-size: 14px;
+              line-height: 14px; } }
       .order-content--item-number {
         font-family: 'Exo 2';
         font-style: normal;
         font-weight: 600;
         font-size: 100px;
-        line-height: 100%;
+        line-height: 100px;
         color: #3A9C3E;
         padding-left: 60px;
         position: relative; }
+        @media (max-width: 768px) {
+          .order-content--item-number {
+            padding-left: 20px;
+            width: 120px;
+            font-size: 70px;
+            line-height: 70px; } }
     .order-content--item:last-child {
       padding-bottom: 0; }
     .order-content .reverse {
       flex-direction: row-reverse;
       position: relative !important; }
+      @media (max-width: 768px) {
+        .order-content .reverse {
+          position: relative !important; } }
       .order-content .reverse-icon {
         margin-right: 0;
         margin-left: 20px; }
+        @media (max-width: 768px) {
+          .order-content .reverse-icon {
+            margin-right: 0;
+            margin-left: 0; } }
       .order-content .reverse-text {
         padding-right: 0;
         padding-left: 60px; }
+        @media (max-width: 768px) {
+          .order-content .reverse-text {
+            padding-right: 20px;
+            padding-left: 0; } }
+        @media (max-width: 540px) {
+          .order-content .reverse-text {
+            padding-right: 0;
+            padding-left: 0; } }
       .order-content .reverse-number {
         padding-left: 0;
         padding-right: 60px; }
+        @media (max-width: 768px) {
+          .order-content .reverse-number {
+            width: 120px;
+            padding-right: 0;
+            padding-left: 20px; } }
       .order-content .reverse-number::before {
         content: '';
+        z-index: 1;
         width: 20px;
         height: 20px;
         border-radius: 50%;
@@ -142,8 +214,14 @@
         top: calc(50% - 10px);
         right: -10px !important;
         left: none; }
+        @media (max-width: 768px) {
+          .order-content .reverse-number::before {
+            top: 50%;
+            right: none;
+            left: -10px; } }
       .order-content .reverse-no--number::before {
         content: '';
+        z-index: 1;
         width: 20px;
         height: 20px;
         border-radius: 50%;
@@ -151,6 +229,49 @@
         position: absolute;
         top: calc(50% - 10px);
         left: -10px; }
+        @media (max-width: 768px) {
+          .order-content .reverse-no--number::before {
+            top: 50%; } }
+    .order-content--line {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 54px;
+      left: calc(50% - 2px);
+      width: 4px;
+      height: calc(100% - 226px); }
+      @media (max-width: 992px) {
+        .order-content--line {
+          height: calc(100% - 175px); } }
+      @media (max-width: 768px) {
+        .order-content--line {
+          height: calc(100% - 130px);
+          left: -2px; } }
+      .order-content--line-fill {
+        position: absolute;
+        width: 4px;
+        min-height: 0;
+        background: #3A9C3E;
+        transition: 0.4s; }
+      .order-content--line .fill-33 {
+        min-height: 33%;
+        transition: 0.4s; }
+        @media (max-width: 992px) {
+          .order-content--line .fill-33 {
+            min-height: 32%; } }
+      .order-content--line .fill-67 {
+        min-height: 68%; }
+      .order-content--line .fill-100 {
+        min-height: 100%; }
+    .order-content--line::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: calc(50% - 1px);
+      width: 1px;
+      height: 100%;
+      border-right: 2px dashed #DADADA; }
   .order-button {
     width: 240px;
     height: 50px;
@@ -158,11 +279,13 @@
     justify-content: center;
     align-items: center;
     background: #3A9C3E;
-    border-radius: 8px;
-    margin-top: 70px; }
+    border-radius: 8px; }
     @media (max-width: 992px) {
       .order-button {
         margin-top: 50px; } }
+    @media (max-width: 540px) {
+      .order-button {
+        margin-top: 15px; } }
     .order-button a {
       font-family: 'Exo 2';
       font-weight: 500;
