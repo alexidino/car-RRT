@@ -45,7 +45,7 @@
             font-size: 16px;
             line-height: 19px;
             color: inherit; }
-            @media (max-width: 1400px) {
+            @media (max-width: 1600px) {
               .header .container .nav-menu .nav-links li a {
                 margin: 12px; } }
           .header .container .nav-menu .nav-links li a:hover {

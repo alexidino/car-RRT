@@ -1,5 +1,7 @@
 
 // --- Nav background ---
+
+
 const header = document.querySelector('.header');
 const nav = document.querySelector('.nav');
 
@@ -15,17 +17,15 @@ menu.addEventListener('click', (e) => {
 })
 
 nav.addEventListener('click', (e) => {
-  
-  console.log('nav >>>', nav);
   if(header.classList.contains('active')) {
   header.classList.remove('active');
   }
 })
 
 
+// -------------- href active background -------------
 
-// const sellcar = document.querySelectorAll('.sellcar-main')[0];
-// const sellcarRect = sellcar.getBoundingClientRect().top + 100;
+
 const orderContent = document.querySelectorAll('.order-content--item');
 const selector = [... document.querySelectorAll('.advantage-main, .order-main, .documents-main, .map-block')]
 let currentItem = '';
@@ -49,7 +49,8 @@ document.querySelectorAll('.nav-menu a').forEach((item, id) => {
 });
 
 
-// const refAdvantage = document.querySelector('.href-advantage');
+// --------- scroll animation ----------
+
 
 window.addEventListener('scroll', () => {
   selector.forEach((item, id) => {
@@ -64,40 +65,40 @@ window.addEventListener('scroll', () => {
     }
   });
 
-
   orderContent.forEach((item, id) => {
-    // if(item.getBoundingClientRect().top -100 <= window.scrollY) {
-    // if(item.getBoundingClientRect().top - 300 >= 0) {
-    //   document.querySelector('.order-content--line-fill').classList.remove('fill-33')
-    // }
-    // console.log(id, item.getBoundingClientRect().top)
-    // console.log('item.window >>>', window.scrollY)
-    // console.log('orderContent >>>', item)
-
-    orderContent[0].getBoundingClientRect().top - 300 <= 0 
+    console.log('>>>', orderContent[id].getBoundingClientRect().top)
+    orderContent[id].getBoundingClientRect().top - 400 <= 0 
     ? 
-    document.querySelector('.order-content--line-fill').classList.add('fill-33') 
+    document.querySelector('.order-content--line-fill').classList.add(`fill-${id}`) ||
+    item.classList.add('active-item') 
     : 
-    document.querySelector('.order-content--line-fill').classList.remove('fill-33')
-
-    // if(orderContent[0].getBoundingClientRect().top - 300 <= 0) {
-    // document.querySelector('.order-content--line-fill').classList.add('fill-33');
-    // }
-    // if(orderContent[0].getBoundingClientRect().top - 300 >= 0) {
-    //   document.querySelector('.order-content--line-fill').classList.remove('fill-33')
-    // }
-    if(orderContent[1].getBoundingClientRect().top - 300 <= 0) {
-    document.querySelector('.order-content--line-fill').classList.add('fill-67');
-    }
-    if(orderContent[1].getBoundingClientRect().top - 300 >= 0) {
-      document.querySelector('.order-content--line-fill').classList.remove('fill-67')
-    }
-    if(orderContent[2].getBoundingClientRect().top - 300 <= 0) {
-    document.querySelector('.order-content--line-fill').classList.add('fill-100');
-    }
-    if(orderContent[2].getBoundingClientRect().top - 300 >= 0) {
-      document.querySelector('.order-content--line-fill').classList.remove('fill-100')
-    }
+    document.querySelector('.order-content--line-fill').classList.remove(`fill-${id}`) ||
+    item.classList.remove('active-item') 
   });
-
 })
+
+// --------------- Yandex map scroll off ----------------
+
+const mapBlock = document.querySelector('.map-block');
+const mapTitle = document.createElement('div');
+mapTitle.className = 'map-title';
+mapTitle.textContent = 'Для активации карты нажмите по ней';
+mapBlock.appendChild(mapTitle);
+
+mapBlock.addEventListener('click', () => {
+  mapBlock.children[0].style.removeProperty('pointer-events');
+  mapTitle.parentElement.removeChild(mapTitle);
+})
+
+mapBlock.onmousemove = (e) => {
+  mapTitle.style.display = 'block';
+  if(e.offsetY > 10) mapTitle.style.top = e.offsetY + 20 + 'px';
+  if(e.offsetX > 10) mapTitle.style.left = e.offsetX + 20 + 'px';
+};
+
+mapBlock.onmouseleave = (e) => {
+  mapTitle.style.display = 'none';
+};
+
+
+

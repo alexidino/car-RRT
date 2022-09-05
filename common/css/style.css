@@ -63,7 +63,7 @@
             font-size: 16px;
             line-height: 19px;
             color: inherit; }
-            @media (max-width: 1400px) {
+            @media (max-width: 1600px) {
               .header .container .nav-menu .nav-links li a {
                 margin: 12px; } }
           .header .container .nav-menu .nav-links li a:hover {
@@ -281,7 +281,8 @@
   background: #F5F5F7;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin: 0 auto; }
   @media (max-width: 992px) {
     .buycar {
       -webkit-box-orient: vertical;
@@ -290,7 +291,8 @@
               flex-direction: column-reverse; } }
   .buycar-form {
     height: 100%;
-    width: 680px;
+    width: 45%;
+    margin-right: -10%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -324,7 +326,6 @@
           -ms-flex-pack: justify;
               justify-content: space-between;
       width: 100%;
-      height: 350px;
       font-family: 'Exo 2'; }
       @media (max-width: 992px) {
         .buycar-form--center {
@@ -408,12 +409,10 @@
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%); }
     @media (max-width: 1400px) {
       .buycar-image {
-        width: 100%;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(37% 0, 100% 0, 100% 100%, 0 100%); } }
     @media (max-width: 1200px) {
       .buycar-image {
-        width: 100%;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(47% 0, 100% 0, 100% 100%, 0 100%); } }
     @media (max-width: 992px) {
@@ -500,7 +499,7 @@
           flex-wrap: wrap; } }
   .advantage-content--info {
     height: 100%;
-    width: 25%;
+    width: calc(25% + 24px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -657,7 +656,8 @@
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      padding-bottom: 110px; }
+      padding-bottom: 110px;
+      opacity: 0.5; }
       @media (max-width: 992px) {
         .order-content--item {
           padding-bottom: 40px; } }
@@ -759,7 +759,7 @@
         font-weight: 600;
         font-size: 100px;
         line-height: 100px;
-        color: #3A9C3E;
+        color: #dadada;
         padding-left: 60px;
         position: relative; }
         @media (max-width: 768px) {
@@ -770,6 +770,10 @@
             line-height: 70px; } }
     .order-content--item:last-child {
       padding-bottom: 0; }
+    .order-content .active-item {
+      opacity: 1 !important; }
+      .order-content .active-item .order-content--item-number {
+        color: #3A9C3E; }
     .order-content .reverse {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
@@ -861,16 +865,18 @@
         background: #3A9C3E;
         -webkit-transition: 0.4s;
         transition: 0.4s; }
-      .order-content--line .fill-33 {
+      .order-content--line .fill-0 {
+        min-height: 0; }
+      .order-content--line .fill-1 {
         min-height: 33%;
         -webkit-transition: 0.4s;
         transition: 0.4s; }
         @media (max-width: 992px) {
-          .order-content--line .fill-33 {
+          .order-content--line .fill-1 {
             min-height: 32%; } }
-      .order-content--line .fill-67 {
+      .order-content--line .fill-2 {
         min-height: 68%; }
-      .order-content--line .fill-100 {
+      .order-content--line .fill-3 {
         min-height: 100%; }
     .order-content--line::before {
       content: '';
@@ -1543,11 +1549,27 @@
 .map-block {
   width: 100%;
   height: 700px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  cursor: help; }
   @media (max-width: 540px) {
     .map-block {
       height: 450px;
       overflow: hidden; } }
+  .map-block .map-title {
+    position: absolute;
+    z-index: 2;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 5px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 5px;
+    display: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    -o-border-image: initial;
+       border-image: initial; }
 
 .footer-main {
   width: 100%;

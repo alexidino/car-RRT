@@ -74,6 +74,7 @@
       display: flex;
       align-items: center;
       padding-bottom: 110px;
+      opacity: 0.5;
       @media (max-width: 992px) {
         padding-bottom: 40px;
       }
@@ -168,7 +169,8 @@
         font-weight: 600;
         font-size: 100px;
         line-height: 100px;
-        color: #3A9C3E;
+        // color: #3A9C3E;
+        color: #dadada;
         padding-left: 60px;
         position: relative;
         @media (max-width: 768px) {
@@ -181,6 +183,12 @@
     }
     &--item:last-child {
       padding-bottom: 0;
+    }
+    .active-item {
+      opacity: 1 !important;
+      .order-content--item-number {
+        color: #3A9C3E;
+      }
     }
     .reverse {
       flex-direction: row-reverse;
@@ -271,17 +279,20 @@
         background: #3A9C3E;
         transition: 0.4s;
       }
-      .fill-33 {
+      .fill-0 {
+        min-height: 0;
+      }
+      .fill-1 {
         min-height: 33%;
         transition: 0.4s;
         @media (max-width: 992px) {
           min-height: 32%;
         }
       }
-      .fill-67 {
+      .fill-2 {
         min-height: 68%;
       }
-      .fill-100 {
+      .fill-3 {
         min-height: 100%;
       }
     }
